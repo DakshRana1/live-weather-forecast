@@ -1,73 +1,115 @@
-# React + TypeScript + Vite
+# 🌤️ Atmos – Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive weather dashboard built with React, TypeScript, and Vite. Atmos provides an intuitive interface for visualizing weather data with smooth animations and clean design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 📊 Interactive weather charts powered by Chart.js
+- 💨 Real-time weather data visualization
+- 🎨 Responsive UI with Tailwind CSS
+- 🔄 Smooth transitions using Framer Motion
+- 🧭 Multi-page navigation with React Router
+- 🔍 Element inspector for development (Alt+Shift+I)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Layer | Technology |
+|---|---|
+| Framework | React 19 + TypeScript |
+| Build Tool | Vite 7 |
+| Styling | Tailwind CSS 4 |
+| Charts | Chart.js + react-chartjs-2 |
+| Animations | Framer Motion |
+| Routing | React Router DOM 7 |
+| Icons | Lucide React |
+| Linting | ESLint + typescript-eslint |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/atmos-weather-dashboard.git
+cd atmos-weather-dashboard
+
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+---
+
+## 📁 Project Structure
+
+```
+atmos/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── main.tsx          # App entry point
+│   └── ...               # Components, pages, hooks
+├── index.html
+├── vite.config.ts
+├── tailwind.config.ts
+├── tsconfig.json
+└── package.json
+```
+
+---
+
+## ⚙️ Configuration
+
+Environment variables should be prefixed with `VITE_` or `NEXT_PUBLIC_`:
+
+```env
+VITE_WEATHER_API_KEY=your_api_key_here
+```
+
+---
+
+## 🧑‍💻 Development Tools
+
+This project includes a built-in **element picker** for inspecting DOM elements and tracing them back to their source files. Press `Alt+Shift+I` to toggle inspect mode during development.
+
+---
+
+## 📜 License
+
+This project is private. All rights reserved.
